@@ -1,0 +1,148 @@
+  <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Барбершоп &laquo;Бородинский&raquo;</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  
+<body class="inner-page">
+  <header class="main-header">
+    <div class="container clearfix">
+      <nav class="main-navigation clearfix">
+        <a class="logo-inner" href="index.html"><img src="img/logo-borodinski-2.png" width="111" height="24" alt="Барбершоп &laquo;Бородинский&raquo;"></a>
+         <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="price.html">Прайс-лист</a>
+          </li>
+          <li class="active">
+            <a>Магазин</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-block">
+        <a class="login" href="#">Вход</a>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <div class="inner-page-title">
+      <h1>Средства для ухода</h1>
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="catalog.html">Магазин</a>
+        </li>
+        <li class="current">
+          Средства для ухода
+        </li>
+      </ul>
+    </div>
+    
+    <div class="catalog-filter">
+     <form action="#" method="get">
+       <fieldset>
+         <legend>Производители:</legend>
+          <input type="checkbox" id="checkbox1" checked>
+          <label for="checkbox1">Baxter of california</label>
+
+          <input type="checkbox" id="checkbox2">
+          <label for="checkbox2">Mr natty</label>
+
+          <input type="checkbox" id="checkbox3" checked>
+          <label for="checkbox3">Suavecito</label>
+
+          <input type="checkbox" id="checkbox4">
+          <label for="checkbox4">Malin+goetz</label>
+
+          <input type="checkbox" id="checkbox5">
+          <label for="checkbox5">Murray's</label>
+
+          <input type="checkbox" id="checkbox6" checked>
+          <label for="checkbox6">American crew</label>
+        </fieldset>
+     </form>
+
+     <form action="#" method="get">
+       <fieldset class="catalog-filter-radio">
+         <legend>Группы товаров:</legend>
+         <input type="radio" id="radio-button1" name="radio-button">
+         <label for="radio-button1">Бритвенные<br> принадлежности</label>
+         
+         <input type="radio" id="radio-button2" name="radio-button" checked>
+         <label for="radio-button2">Средства для ухода</label>
+         
+         <input type="radio" id="radio-button3" name="radio-button">
+         <label for="radio-button3">Аксессуары</label>
+       </fieldset>
+     </form>
+      
+     <button class="btn btn-catalog" type="submit">Показать</button>
+     </div> 
+  </main>
+   
+  <footer class="main-footer inner-page-footer">
+    <div class="container clearfix">
+      <section class="footer-contacts">
+       <p>Барбершоп «Бородинский»<br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          <a href="map.html">Как нас найти?</a><br>
+          Телефон: +7 (812) 666-02-66
+       </p>
+        
+      </section>
+      <section class="footer-social">
+        <p>
+          Давайте дружить!
+        </p>
+        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+      </section>
+      <section class="footer-copyright">
+        <p>
+          Разработано:
+        </p>
+        <a class="btn" href="https://htmlacademy.ru">HTMLAcademy.ru</a>
+      </section>
+    </div>
+  </footer>
+  
+  <div class="modal-content">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    
+    <h2 class="modal-content-title">Личный кабинет</h2>
+    <p>Введите свой логин и пароль</p>
+    
+    <form class="login-form" action="#" method="post">
+      <input class="icon-user" type="text" name="login" placeholder="Логин" required>
+      <input class="icon-password" type="password" name="password" placeholder="Пароль" required>
+      <label class="login-checkbox">
+        <input type="checkbox" name="remember">
+        <span class="checkbox-indicator"></span>
+        Запомните меня
+      </label>
+      <a class="restore" href="#">Я забыл пароль!</a>
+      <button class="btn" type="submit">Войти</button>
+    </form>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html>

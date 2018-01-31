@@ -471,32 +471,40 @@ body {
   margin-bottom: 65px;
   
   text-align: center;
+  
+  overflow: hidden;
 }
 
 .big-heading h2 {
   position: relative;
-  z-index: 2;
   
-  display: inline-block;
+  display: inline;
   margin: 0;
   padding: 0 25px;
   
   font-size: 48px;
   line-height: 48px;
   text-align: center;
-  
-  background: #f8f3f0 url("../img/texture-index-content.jpg") repeat;
 }
 
-.big-heading::after {
-  content: "";
-  position: relative;
-  top: -25px;
-  z-index: 1;
+.big-heading h2::before,
+.big-heading h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
   
-  display: block;
+  height: 2px;
+  width: 9999px;
   
-  border-bottom: 2px solid #000000;
+  background-color: #000000;
+}
+
+.big-heading h2::before {
+  right: 100%;
+}
+
+.big-heading h2::after {
+  left: 100%;
 }
 
 .custom-list-1 {
@@ -570,6 +578,195 @@ body {
 .short-text {
   padding-right: 80px;
 }
+
+/* Стилизация фильтра поиска товаров */
+
+.catalog-filter input[type="checkbox"],
+.catalog-filter input[type="radio"]{
+  display: none;
+}
+
+.catalog-filter input[type="checkbox"] + label,
+.catalog-filter input[type="radio"] + label {
+  display: block;
+  margin: 19px 0;
+  line-height: 18px;
+  font-size: 14px;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.catalog-filter input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  background-color: #f9f6f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.catalog-filter input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 12px;
+  height: 12px;
+}
+
+fieldset {
+  border-style: none;
+  margin-top: -18px;
+  margin-left: -10px;
+  margin-bottom: 40px;
+}
+
+legend {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+.catalog-filter input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  background-color: #f9f6f3;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.catalog-filter input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  background-color: #000000;
+  width: 5px;
+  height: 5px;
+}
+
+.catalog-filter input[type="radio"] + label {
+  margin-top: 23px;
+}
+
+.btn-catalog {
+  width: 112px;
+  height: 43px;
+  margin-top: -15px;
+}
+
+/* Стилизация магазина */
+
+.shop-items-container {
+  float: right;
+  max-width: 700px;
+  margin-top: 53px;
+  margin-right: 10px;
+  margin-bottom: 49px;
+}
+.shop-item {
+  float: left;
+  width: 220px;
+  min-height: 286px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.shop-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.shop-item:nth-child(n+4) {
+  margin-bottom: 0;
+}
+
+.shop-item p {
+  margin: 0 16px 0;
+
+  line-height: 18px;
+  color: black;
+}
+.shop-item a.item-name-link {
+  text-decoration: none;
+}
+.shop-item p:first-of-type {
+  margin-top: 6px;
+
+  text-transform: none;
+}
+
+
+.price-and-buy {
+  width: 187px;
+  height: 44px;
+  margin: 13px auto 15px;
+}
+
+/*.price-and-buy > a.btn {
+  float: right;
+  width: 78px;
+}*/
+
+.item-price {
+  display: inline-block;
+  width: 109px;
+  height: 34px;
+  padding-top: 10px;
+
+  text-align: center;
+  color: black;
+
+  background-color: rgb(229, 229, 229);
+}
+
+/*pp starts*/
+.item-price {
+  width: 106px;
+  height: 34px;
+  padding-top: 9px;
+  padding-left: 3px;
+}
+
+
+
+.shop-item:first-child .item-price,
+.shop-item:nth-child(6n) .item-price,
+.item-information .item-price {
+  width: 105px;
+  padding-left: 4px;
+}
+
+.shop-item:first-child .item-price::first-letter,
+.shop-item:nth-child(6n) .item-price::first-letter,
+.item-information .item-price::first-letter {
+  letter-spacing: 3px;
+}
+
+
+.price-and-buy .btn {
+  float: right;
+  width: 76px;
+  padding-top: 9px;
+  padding-left: 2px;
+}
+
 
 /* Стилизация футера */
 
